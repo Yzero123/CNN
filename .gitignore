@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# TensorFlow / Keras
+*.keras
+checkpoints/
+training_checkpoints/
+*.ckpt
+*.ckpt.index
+*.ckpt.data*
+
+# 说明：仓库已跟踪的 model/3cl_epoch10.h5 是随仓库分发的预训练权重，
+# 故意不忽略 model/ 目录；本机新训练出的模型请用 --model-out 写到别处。
