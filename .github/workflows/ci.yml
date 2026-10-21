@@ -15,7 +15,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.12"]
+        # 最低 3.11：随仓库提供的 Keras 2 权重需 keras>=3.13 才能反序列化，
+        # 而 keras>=3.13 的 requires_python 为 >=3.11，Python 3.10 无法安装。
+        python-version: ["3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
