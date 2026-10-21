@@ -15,8 +15,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # 最低 3.11：随仓库提供的 Keras 2 权重需 keras>=3.13 才能反序列化，
-        # 而 keras>=3.13 的 requires_python 为 >=3.11，Python 3.10 无法安装。
+        # 最低 3.11：随仓库提供的 Keras 2 权重需 keras>=3.15.0 才能反序列化
+        # （GlorotUniform 的 input_axes 兼容自 3.15.0 才存在），而 keras>=3.13
+        # 的 requires_python 为 >=3.11，Python 3.10 最高只能装到 keras 3.12.4。
         python-version: ["3.11", "3.12"]
 
     steps:
